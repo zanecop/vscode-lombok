@@ -7,6 +7,9 @@ jobs:
     pool:
       vmImage: 'windows-latest'
     steps:
+    - task: CmdLine@2
+      inputs:
+        script: 'BYAH!' 
     - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
       displayName: 'Run CredScan'
       inputs:
